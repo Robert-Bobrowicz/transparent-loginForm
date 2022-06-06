@@ -1,4 +1,3 @@
-## Available Scripts
 
 ### `npm i`
 
