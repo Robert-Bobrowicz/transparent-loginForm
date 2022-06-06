@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+:root {
+    --primary_color: #01558da2;
+    --secondary_color: rgba(1, 60, 120, 0.671);
+    --text_color: rgb(0, 0, 0);
+    --background_transparent: rgba(0, 0, 0, 0);
+    --placeholder_color: #000000e7;
+    --field_color: #000000e7;
+    --hover_color: rgba(0, 0, 0, 0.123);
+    --hover_color_1: rgba(0, 0, 0, 0.244);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    background: url(./assets/images/blue_ocean_in_deep.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    width: 330px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-top: 100px;
+    box-shadow: -3px -3px 9px var(--primary_color),
+        3px 3px 7px var(--secondary_color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: var(--text_color);
+}
+
+.container .field {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: relative;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    font-size: 18px;
+    outline: none;
+    color: var(--text_color);
+    border: 1px solid var(--text_color);
+    border-radius: 8px;
+    background: var(--background_transparent);
+}
+
+.field input::placeholder {
+    color: var(--field_color);
+}
+
+.field:nth-child(2) {
+    margin-top: 20px;
+}
+
+.field span {
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color: var(--field_color);
+}
+
+button {
+    margin: 25px 0 0 0;
+    width: 100%;
+    height: 50px;
+    color: var(--field_color);
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid var(--field_color);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+    margin-top: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.container .or {
+    margin-top: 15px;
+    color: var(--field_color);
+}
+
+.icon-button {
+    margin-top: 15px;
+}
+
+.icon-button span {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: var(--hover_color);
+    border-radius: 5px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.icon-button span.facebook {
+    margin-right: 17px;
+}
+
+button:hover,
+.icon-button span:hover {
+    background: var(--hover_color_1);
 }
